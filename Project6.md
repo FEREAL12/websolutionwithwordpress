@@ -209,8 +209,8 @@ sudo systemctl enable mysqld
 ```
 sudo mysql
 CREATE DATABASE wordpress;
-CREATE USER `myuser`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';
-GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';
+CREATE USER `myuser`@`172.31.39.41` IDENTIFIED BY 'mypass';
+GRANT ALL ON wordpress.* TO 'myuser'@'172.31.39.41';
 FLUSH PRIVILEGES;
 SHOW DATABASES;
 exit
@@ -219,14 +219,16 @@ exit
 ### Install MySQL client and test that connectiveity from Web Server to DB server by using mysql-client
 ```
 sudo yum install mysql
-sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
+sudo mysql -u admin -p -h 172.31.39.40
 ```
 
 ### Change permissions and configuration so Apache could use WordPress:
 
 ### Enable TCP port 80 in Inbound Rules configuration for Web Server EC2 (enable from everywhere 0.0.0.0/0)
 
-Try to access from your browser the link to your WordPress http://<Web-Server-Public-IP-Address>/wordpress/
+Try to access from your browser the link to your WordPress http://3.17.204.32/wordpress/
+![image](https://user-images.githubusercontent.com/41236641/127143778-5166df95-d1bf-4bd5-8a57-b72e502dcfcb.png)
+
 
 
 
