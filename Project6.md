@@ -5,23 +5,15 @@
 ```
 lsblk
 ```
-
-### lsblk inspect and list what block devices are attached to the server
-```
-lsblk
-```
-
 ### To list all mounts and free space on your Server
 ```
 df -h
 ```
-
 ### To create a new partition on each of the 3 disks
 ```
 sudo gdisk /dev/xvdf
 sudo gdisk /dev/xvdg
 sudo gdisk /dev/xvdh
-sudo gdisk /dev/xvdi
 ```
 ```
  GPT fdisk (gdisk) version 1.0.3
@@ -68,9 +60,7 @@ sudo yum install lvm2
 sudo pvcreate /dev/xvdf1
 sudo pvcreate /dev/xvdg1
 sudo pvcreate /dev/xvdh1
-sudo pvcreate /dev/xvdi1
 ```
-
 ### To verify that the Physical volume has been created successfully
 ```
 sudo pvs
@@ -204,8 +194,6 @@ sudo systemctl restart httpd
   sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
   sudo setsebool -P httpd_can_network_connect=1
 ```
-
-
 ### Install MySQL on the DB Server EC2
 ```
 sudo yum update
