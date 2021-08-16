@@ -162,6 +162,10 @@ sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
 sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
+```
+sudo systemctl enable httpd
+sudo systemctl start httpd
+```
 ### To install PHP and it’s depemdencies
 ```
 sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
