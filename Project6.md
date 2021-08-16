@@ -21,6 +21,7 @@ df -h
 sudo gdisk /dev/xvdf
 sudo gdisk /dev/xvdg
 sudo gdisk /dev/xvdh
+sudo gdisk /dev/xvdi
 ```
 ```
  GPT fdisk (gdisk) version 1.0.3
@@ -67,6 +68,7 @@ sudo yum install lvm2
 sudo pvcreate /dev/xvdf1
 sudo pvcreate /dev/xvdg1
 sudo pvcreate /dev/xvdh1
+sudo pvcreate /dev/xvdi1
 ```
 
 ### To verify that the Physical volume has been created successfully
