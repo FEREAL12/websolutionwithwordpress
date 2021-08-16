@@ -6,6 +6,11 @@
 lsblk
 ```
 
+### lsblk inspect and list what block devices are attached to the server
+```
+lsblk
+```
+
 ### To list all mounts and free space on your Server
 ```
 df -h
